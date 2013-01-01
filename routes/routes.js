@@ -1,5 +1,7 @@
 const express = require("express");
 const passport = require("passport");
+const bcrypt = require('bcryptjs');
+
 const db = require('../settings/lowdb_config')
 const router = express.Router();
 
@@ -41,14 +43,16 @@ router.get("/main",(req,res,next) =>{
     const login = req.session.login;
 
     if(!login){
-        res.status(401).send({ error: `Es nesesario estar Logeado!` });
+        res.status(401).send({ error: `Es nesesario estar Logueado!` });
         return;
     }
     //console.log(req.session);
     next();
 
 }, (req, res) => {
-    res.render("main");
+
+    const user = req.session.passport.user;
+    res.render("main",{user});
 });
 
 // cerra session
@@ -67,9 +71,14 @@ router.post('/register',(req,res)=>{
 
 const {name,username,password} = req.body
 
-db.get('users').push({name,username,password}).write()
+bcrypt.genSalt(10,(err,salt)=>{
+bcrypt.hash(password,salt,(err,hash)=>{
 
-res.render('main')
+db.get('users').push({name,username,password:hash}).write()
+
+})
+})
+res.render('main',{user:{name}})
 
 
 })

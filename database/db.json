@@ -1,6 +1,7 @@
 {
   "users": [
     {
+      "name": "Angel Luis",
       "username": "luistormes.lata@gmail.com",
       "password": "1234567890"
     },
@@ -13,6 +14,16 @@
       "name": "gabriel gonzalez",
       "username": "gabriel.marquez27775006@gmail.com",
       "password": "27775006"
+    },
+    {
+      "name": "Juan Perez",
+      "username": "juanperez15@gmail.com",
+      "password": "$2a$10$Icu19nvROV7nAWdvsIl02.F3G237tap8UTQtkkp/5jUpfdQMV.H2O"
+    },
+    {
+      "name": "Juan Perez",
+      "username": "juanperez15@gmail.com",
+      "password": "$2a$10$vEvkZpcejhggtRssPmhiOOvhK8VJLmlkU3WfGR8gps9UtGKHeO2De"
     }
   ]
 }
