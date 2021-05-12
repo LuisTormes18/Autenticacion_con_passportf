@@ -3,16 +3,13 @@ const passport = require("passport");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  if (!req.session) {
-    res.redirect("login");
-  } else {
-    res.redirect("main");
-  }
-  // res.redirect("/login");
+
+res.redirect("/main");
+
 });
 
 router.get("/login", (req, res) => {
-  res.render("index");
+res.render("index");
 });
 
 router.post(
@@ -22,10 +19,26 @@ router.post(
     failureRedirect: "/login",
   })
 );
+// main----------------------------------------------------------
 router.get("/main", (req, res) => {
-  req.session.cookie.idUsersession = 12345;
-  console.log(req.session);
-  res.render("main");
+    res.render("main");
 });
+
+router.post("/signout",(req,res)=>{
+  req.session.destroy();
+  res.redirect('/');
+})
+//----------------------------------------------------------------------------------------------------
+
+
+const IsLogin = (req,res,nex) =>{
+
+
+
+
+}
+
+
+
 
 module.exports = router;

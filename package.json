@@ -2,13 +2,21 @@
   "name": "autenticacion_con_passport",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "Luis Tormes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisTormes18/Autenticacion_con_passportf.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisTormes18/Autenticacion_con_passportf/issues"
+  },
+  "homepage": "https://github.com/LuisTormes18/Autenticacion_con_passportf#readme",
   "dependencies": {
     "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
@@ -16,7 +24,6 @@
     "express-session": "^1.17.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^6.6.2",
     "session": "^0.1.0"
   }
 }

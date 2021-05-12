@@ -17,11 +17,10 @@ app.use(passport.session());
 require(path.join(__dirname, "./settings/passport-local"))(passport); // cambiando la ruta de mi strategia local
 
 app.use(
-  session({
-    secret: "mi secerete de esta app",
+	session({
+    secret: "mi secerete de esta app ",
     resave: false,
-    saveUninitialized: true,
-    store:"session"
+    saveUninitialized: true
   })
 );
 

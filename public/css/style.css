@@ -1,3 +1,13 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Segoe Ui;
+}
+
+/*Login*/
+
+
 .container {
   height: 100vh;
   width: 100%;
@@ -32,4 +42,54 @@ img {
 #btn-submit{
   margin-top: 120px;
   height:50px;
+}
+
+/*Main */
+
+header{
+  height: 80px;
+  background: silver;
+  display: flex;
+padding: 0px 15px;
+  justify-content: space-between;
+ /* align-items: center;*/
+}
+.img-header{
+  height: 120px;
+   width: 70px;
+    position: relative;
+  margin-top: 0px;
+
+}
+.form-header{
+ /*background: none;*/
+  height: 80px;
+  width: 150px;
+
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80px;
+  z-index: 15 ;
+}
+.btn-header{
+  font-size: 20px;
+  background: none;
+  border:0px;
+  cursor: pointer;
+}
+
+.wellcome{
+  position: relative;
+  margin: auto;
+  text-align: center; 
+  margin-top: 200px;
+}
+h1{
+  color: silver;
+  font-size: 50px;
+
 }
