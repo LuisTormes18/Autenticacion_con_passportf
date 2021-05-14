@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "username": "luistormes.lata@gmail.com",
+      "password": "1234567890"
+    },
+    {
+      "name": "Luis Tormes",
+      "username": "luistormes.lata@gmail.com",
+      "password": "1234567890"
+    },
+    {
+      "name": "gabriel gonzalez",
+      "username": "gabriel.marquez27775006@gmail.com",
+      "password": "27775006"
+    }
+  ]
+}

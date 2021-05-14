@@ -40,17 +40,20 @@ img {
   margin: 10px auto;
 }
 #btn-submit{
-  margin-top: 120px;
+  margin-top: 100px;
   height:50px;
 }
-
+#btn-register{
+  margin-top: 50px;
+  height:50px; 
+}
 /*Main */
 
 header{
   height: 80px;
   background: silver;
   display: flex;
-padding: 0px 15px;
+  padding: 0px 20px;
   justify-content: space-between;
  /* align-items: center;*/
 }
@@ -61,12 +64,6 @@ padding: 0px 15px;
   margin-top: 0px;
 
 }
-.form-header{
- /*background: none;*/
-  height: 80px;
-  width: 150px;
-
-}
 
 ul{
   list-style: none;
@@ -75,13 +72,11 @@ ul{
   line-height: 80px;
   z-index: 15 ;
 }
-.btn-header{
-  font-size: 20px;
-  background: none;
-  border:0px;
-  cursor: pointer;
+a{
+  text-decoration: none;
+  color: black;
+  padding: 0px 10px;
 }
-
 .wellcome{
   position: relative;
   margin: auto;

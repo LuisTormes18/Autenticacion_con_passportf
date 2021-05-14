@@ -1,27 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="./css/style.css" />
-		<title>Document</title>
-	</head>
+<%-include('./partials/head')-%>
 	<body>
 		<header>
 			<figure><img class="img-header" src="./img/Logo.png" /></figure>
 
-			<form action="/signout" method="post" class="form-header">
 				<nav>
 					<ul>
-						<li><button class="btn-header">Sign out</button></li>
+                        <li> <span> </span> </li>
+                        <li><a class="btn-header" href="/signout">Sign Out</a></li>
 					</ul>
 				</nav>
-
-				<!-- <input type="submit" value="Enviar" name="signOut"> -->
-			</form>
 		</header>
-
 		<div class="wellcome"><h1>Logeado!</h1></div>
 	</body>
 </html>

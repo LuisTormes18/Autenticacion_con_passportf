@@ -1,6 +1,9 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
+const db = require('./lowdb_config.js')
+
+
 passport.serializeUser((user, done) => {
   done(null, 'user.name');
 });
@@ -8,11 +11,10 @@ passport.serializeUser((user, done) => {
 module.exports = () => {
   passport.use(
     new LocalStrategy((username, password, done) => {
-      if (
-        (username === "luistormes.lata@gmail.com") &
-        (password == "1234567890")
-      ) {
-        return done(null, { username }); // despues le pasare el id y todo lo demás
+      // get user
+      const user = db.get('users').find({username,password}).value()
+      if (user) {     
+        return done(null, { user });       
       }
       return done(null, false);
     })
