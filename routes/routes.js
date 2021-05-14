@@ -1,5 +1,6 @@
 const express = require("express");
 const passport = require("passport");
+const db = require('../settings/lowdb_config')
 const router = express.Router();
 
 router.get("/",(req,res,next) =>{
@@ -20,6 +21,7 @@ router.get("/",(req,res,next) =>{
 
 });
 
+// login
 router.get("/login", (req, res) => {
 res.render("Login");
 });
@@ -28,8 +30,7 @@ router.post(
   "/login",
   passport.authenticate("local", {
     failureRedirect: "/login",
-  }),(req, res)=>{
-        console.log(res)
+  }),(req, res)=>{                     
         req.session.login = true;
         res.redirect('./main')
     }
@@ -50,14 +51,29 @@ router.get("/main",(req,res,next) =>{
     res.render("main");
 });
 
-router.post("/signout",(req,res)=>{
+// cerra session
+
+router.get("/signout",(req,res)=>{
   req.session.destroy();
   res.redirect('/');
 })
+
+// register
+router.get('/register',(req,res)=>{
+    res.render('register');
+})
+
+router.post('/register',(req,res)=>{
+
+const {name,username,password} = req.body
+
+db.get('users').push({name,username,password}).write()
+
+res.render('main')
+
+
+})
+
 //----------------------------------------------------------------------------------------------------
-
-
-
-
 
 module.exports = router;
