@@ -1,14 +1,11 @@
-
-*{
+* {
   padding: 0;
   margin: 0;
   font-family: Segoe Ui;
-  font-size: 15px;  
-
+  font-size: 15px;
 }
 
 /*Login*/
-
 
 .container {
   height: 100vh;
@@ -41,65 +38,62 @@ img {
   padding: 5px;
   margin: 10px auto;
 }
-#btn-submit{
+#btn-submit {
   margin-top: 100px;
-  height:50px;
+  height: 50px;
 }
-#btn-register{
+#btn-register {
   margin-top: 50px;
-  height:50px; 
+  height: 50px;
 }
-.btn-header{
-   border: 1px solid black;  
-   padding:15px; 
-   border-radius: 10px; 
-   margin: 10px; 
-   font-size: 14px;
-
+.btn-header {
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 14px;
 }
-#a-register{
+#a-register {
   width: 100%;
   display: inline-block;
   text-align: center;
 }
 /*Main */
 
-header{
+header {
   height: 80px;
   background: silver;
   display: flex;
   padding: 0px 20px;
   justify-content: space-between;
- /* align-items: center;*/
+  /* align-items: center;*/
 }
-.img-header{
+.img-header {
   height: 120px;
-   width: 70px;
-    position: relative;
+  width: 70px;
+  position: relative;
   margin-top: 0px;
-
 }
 
-ul{
+ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   line-height: 80px;
-  z-index: 15 ;
+  z-index: 15;
 }
-header a{
+header a {
   text-decoration: none;
   color: black;
   padding: 0px 10px;
 }
-.wellcome{
+.wellcome {
   position: relative;
   margin: auto;
-  text-align: center; 
+  text-align: center;
   margin-top: 200px;
 }
-h1{
+h1 {
   color: silver;
   font-size: 50px;
-
 }
